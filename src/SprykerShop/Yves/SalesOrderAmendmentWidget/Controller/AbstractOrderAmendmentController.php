@@ -44,7 +44,7 @@ abstract class AbstractOrderAmendmentController extends AbstractController
      */
     protected function addErrorMessagesFromForm(FormInterface $form): void
     {
-        /** @var list<\Symfony\Component\Form\FormError> $errors */
+        /** @var \Symfony\Component\Form\FormErrorIterator<\Symfony\Component\Form\FormError> $errors */
         $errors = $form->getErrors(true);
         foreach ($errors as $error) {
             $this->addErrorMessage($error->getMessage());
